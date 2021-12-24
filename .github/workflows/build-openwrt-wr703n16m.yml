@@ -81,6 +81,11 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        
+    - name: wr703n Set 16M
+      run: |        
+        cd openwrt/target/linux/ath79/image
+        sed -i '227c \ \ $(Device\/tplink-16mlzma)' tiny-tp-link.mk
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
