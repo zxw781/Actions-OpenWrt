@@ -84,8 +84,9 @@ jobs:
         
     - name: wr703n Set 16M
       run: |        
-        cd openwrt/target/linux/ath79/image
-        sed -i '227c \ \ $(Device\/tplink-16mlzma)' tiny-tp-link.mk
+        sed -i '227c \ \ $(Device\/tplink-16mlzma)' openwrt/target/linux/ath79/image/tiny-tp-link.mk
+        sed -i '67c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0x20000 0xfd0000>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n_tl-mr10u.dtsi
+        sed -i '72c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0xff0000 0x10000>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n_tl-mr10u.dtsi
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
