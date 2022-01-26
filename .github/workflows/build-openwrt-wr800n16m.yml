@@ -88,6 +88,7 @@ jobs:
         sed -i '94c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0x20000 0xfd0000>;' openwrt/target/linux/ath79/dts/qca9533_tplink_tl-wr841.dtsi
         sed -i '99c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0xff0000 0x10000>;' openwrt/target/linux/ath79/dts/qca9533_tplink_tl-wr841.dtsi
         sed -i '7c \ \ \ \ \ \ \ \ model = "TP-Link TL-WR800N v2";' openwrt/target/linux/ath79/dts/qca9533_tplink_tl-wr841-v9.dts
+        sed -i '73,74d' openwrt/target/linux/ath79/tiny/base-files/etc/board.d/02_network
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
