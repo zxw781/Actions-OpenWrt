@@ -87,7 +87,7 @@ jobs:
         sed -i '227c \ \ $(Device\/tplink-16mlzma)' openwrt/target/linux/ath79/image/tiny-tp-link.mk
         sed -i '67c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0x20000 0xfd0000>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n_tl-mr10u.dtsi
         sed -i '72c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reg = <0xff0000 0x10000>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n_tl-mr10u.dtsi
-        sed -i '11c \ \ \ \ \ \ \ \ gpios = <&gpio 8 1>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n.dts
+        sed -i '11c \ \ \ \ \ \ \ \ gpio = <&gpio 29 GPIO_ACTIVE_HIGH>;' openwrt/target/linux/ath79/dts/ar9331_tplink_tl-wr703n.dts
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
