@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt wr703n 16M
+name: Build OpenWrt wr703n 16M 4.9
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/zxw781/lede
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: wr703n-16M-4.6.config
+  CONFIG_FILE: wr703n-16M-4.9.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
