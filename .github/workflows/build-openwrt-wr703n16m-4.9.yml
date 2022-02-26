@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/zxw781/lede
+  REPO_URL: https://github.com/zxw781/openwrt
   REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: wr703n-16M-4.9.config
